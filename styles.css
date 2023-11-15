@@ -1,0 +1,62 @@
+/* Reset de margens e padding para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para os botões "Assinar" e "Informações" */
+.linha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.produto {
+    margin: 10px;
+    text-align: center;
+    position: relative; /* Adiciona posicionamento relativo */
+}
+
+/* Estilo para as imagens dos produtos */
+.produto img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ddd; /* Adicionando uma borda */
+    border-radius: 5px; /* Borda arredondada */
+    transition: transform 0.2s ease-in-out; /* Efeito de transição */
+}
+
+.botao-assinar,
+.botao-informacoes {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 110px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Efeito de transição */
+    margin-top: 5px; /* Espaçamento entre os botões */
+}
+
+/* Estilo específico para o botão "Informações" */
+.botao-informacoes {
+    background: linear-gradient(to bottom, #28a745, #218838);
+    margin-top: -15px; /* Move o botão para cima (ajuste conforme necessário) */
+}
+
+/* Efeito de escala nos botões quando hover */
+.botao-assinar:hover,
+.botao-informacoes:hover {
+    transform: scale(1.1); /* Aumenta o botão em 10% quando hover */
+}
+
+/* Efeito de pressionar os botões */
+.botao-assinar:active,
+.botao-informacoes:active {
+    transform: scale(0.9); /* Reduz o botão em 10% quando pressionado */
+}
