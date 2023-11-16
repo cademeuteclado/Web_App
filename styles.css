@@ -1,5 +1,3 @@
-background-color: #000000;
-opacity: 1;
-background-image:  linear-gradient(30deg, #141b95 12%, transparent 12.5%, transparent 87%, #141b95 87.5%, #141b95), linear-gradient(150deg, #141b95 12%, transparent 12.5%, transparent 87%, #141b95 87.5%, #141b95), linear-gradient(30deg, #141b95 12%, transparent 12.5%, transparent 87%, #141b95 87.5%, #141b95), linear-gradient(150deg, #141b95 12%, transparent 12.5%, transparent 87%, #141b95 87.5%, #141b95), linear-gradient(60deg, #141b9577 25%, transparent 25.5%, transparent 75%, #141b9577 75%, #141b9577), linear-gradient(60deg, #141b9577 25%, transparent 25.5%, transparent 75%, #141b9577 75%, #141b9577);
-background-size: 50px 88px;
-background-position: 0 0, 0 0, 25px 44px, 25px 44px, 0 0, 25px 44px;
+body {
+  background-color: black; /* Define o fundo como preto */
+}
