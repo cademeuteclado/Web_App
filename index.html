@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="app.js"></script>
   <meta charset="UTF-8">
   <title>CYBER STORE</title>
   <style>
@@ -56,7 +57,7 @@
     <div class="box">
       <div class="product">
         <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
-        <button class="cta" id="button1" onclick="activateAnimation()">
+        <button class="cta" id="button1">
           <a href="#">Resgatar</a>
           <span class="shape">
             <span></span>
@@ -156,25 +157,20 @@
       </div>
     </div>
   </section>
-  <script>
-    function activateAnimation(button) {
-      button.classList.toggle('active');
-      if (button.id === 'button1') {
-        // Se o botão pressionado for o button1, abre uma janela flutuante com uma mensagem
-        var popup = window.open('', '_blank', 'width=300,height=200');
-        popup.document.write('<h2>Botão 1 pressionado!</h2>');
-      }
-    }
-  
-    // Seleciona todos os botões com a classe .cta
-    var buttons = document.querySelectorAll('.cta');
-  
-    // Itera sobre cada botão e adiciona o evento de clique
-    buttons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        activateAnimation(button);
-      });
+<script>
+  function activateAnimation(button) {
+    button.classList.toggle('active');
+  }
+
+  // Seleciona todos os botões com a classe .cta
+  var buttons = document.querySelectorAll('.cta');
+
+  // Itera sobre cada botão e adiciona o evento de clique
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      activateAnimation(button);
     });
-  </script>
+  });
+</script>
 </body>
 </html>
