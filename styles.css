@@ -1,20 +1,52 @@
-.title.illumination {
-  background: linear-gradient(90deg, #0000ff, #00aaff, #0000ff);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease-in-out infinite;
+.title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
 }
-
-@keyframes gradientAnimation {
+@keyframes lights {
   0% {
-    background-position: 0% 50%;
+    color: hsl(210, 40%, 80%); /* Azul ajustado - Alterei o matiz para 210 (azul) */
+    text-shadow:
+      0 0 1em hsla(240, 100%, 50%, 0.2), /* Azul alterado para o matiz 240 */
+      0 0 0.125em hsla(240, 100%, 60%, 0.3), /* Azul alterado para o matiz 240 */
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), /* Mantido em um tom neutro */
+      1em 0.125em 0.5em hsla(180, 100%, 60%, 0); /* Azul alterado para o matiz 180 */
   }
-  50% {
-    background-position: 100% 50%;
+  
+  30% {
+    color: hsl(210, 80%, 90%); /* Azul ajustado - Alterei o matiz para 210 (azul) */
+    text-shadow:
+      0 0 1em hsla(240, 100%, 50%, 0.5), /* Azul alterado para o matiz 240 */
+      0 0 0.125em hsla(240, 100%, 60%, 0.5), /* Azul alterado para o matiz 240 */
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), /* Mantido em um tom neutro */
+      0.5em 0.125em 0.25em hsla(180, 100%, 60%, 0.4); /* Azul alterado para o matiz 180 */
   }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
   100% {
-    background-position: 0% 50%;
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
+  
 }
