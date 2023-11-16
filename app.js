@@ -1,54 +1,57 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-// Configurações do canvas para cobrir toda a janela
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Array para armazenar as partículas
-const particles = [];
-
-// Função para criar partículas
-function createParticle() {
-  this.x = Math.random() * canvas.width;
-  this.y = -20; // Começa acima do canvas
-  this.radius = Math.random() * 2 + 1; // Tamanho das partículas
-  this.speedY = Math.random() * 3 + 1; // Velocidade das partículas
-  
-  // Criação da partícula
-  this.draw = function() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'white'; // Cor das partículas
-    ctx.fill();
-  }
-}
-
-// Função para atualizar e desenhar as partículas
-function drawParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach((particle, index) => {
-    particle.y += particle.speedY;
-    
-    // Se a partícula sair da tela, remove do array
-    if (particle.y > canvas.height) {
-      particles.splice(index, 1);
+window.addEventListener('load', function() {
+  var titleElement = document.getElementById('titleElement');
+  var text = 'CYBER STORE'; // Adicione um espaço em branco entre as palavras
+  var index = 0;
+  var interval = setInterval(function() {
+    titleElement.innerText = text.slice(0, index) + '|';
+    index++;
+    if (index > text.length) {
+      clearInterval(interval);
+      fadeOut(titleElement);
     }
-    
-    particle.draw();
-  });
-}
+  }, 200);
 
-// Função para criar partículas em intervalos regulares
-setInterval(() => {
-  const particle = new createParticle();
-  particles.push(particle);
-}, 100);
+  function fadeOut(element) {
+    var opacity = 1;
+    var interval = setInterval(function() {
+      element.style.opacity = opacity;
+      opacity -= 0.1;
+      if (opacity <= 0) {
+        clearInterval(interval);
+        fadeIn(element);
+      }
+    }, 100);
+  }
 
-// Loop para animação contínua
-function animate() {
-  requestAnimationFrame(animate);
-  drawParticles();
-}
+  function fadeIn(element) {
+    var opacity = 0;
+    var interval = setInterval(function() {
+      element.style.opacity = opacity;
+      opacity += 0.1;
+      if (opacity >= 1) {
+        clearInterval(interval);
+        startAnimation();
+      }
+    }, 100);
+  }
 
-animate(); // Inicia a animação
+  function startAnimation() {
+    index = 0;
+    interval = setInterval(function() {
+      titleElement.innerText = text.slice(0, index) + '|';
+      index++;
+      if (index > text.length) {
+        clearInterval(interval);
+        fadeOut(titleElement);
+      }
+    }, 200);
+  }
+
+  // Adicionando efeito de iluminação gradiente
+  var shadowAnimation = "glow 2s infinite alternate";
+
+  var styleSheet = document.styleSheets[0];
+  styleSheet.insertRule("@keyframes glow { 0% { box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.7); } 100% { box-shadow: 0 0 40px 20px rgba(0, 0, 255, 0.7); } }", styleSheet.cssRules.length);
+
+  titleElement.style.animation = shadowAnimation;
+});

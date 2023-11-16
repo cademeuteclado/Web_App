@@ -1,3 +1,20 @@
-body {
-  background-color: black; /* Define o fundo como preto */
+.title.illumination {
+  background: linear-gradient(90deg, #0000ff, #00aaff, #0000ff);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
