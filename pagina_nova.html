@@ -2,10 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nova Página</title>
+  <title>Página Nova</title>
+  <!-- Seus estilos CSS -->
+  <link rel="stylesheet" href="seus_estilos.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .divider {
+      width: 5px; /* Largura da linha */
+      background-color: #0f2591; /* Cor da linha */
+      margin: 0 auto; /* Centraliza a linha */
+    }
+
+    .left-side,
+    .right-side {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #f0f0f0;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Botão 1 Pressionado!</h1>
-  <p>Esta é a nova página que será aberta ao clicar no botão.</p>
+  <div class="container">
+    <div class="left-side">
+      <!-- Conteúdo para a conta grátis -->
+      <div>
+        <p><strong>Conta Grátis:</strong></p>
+      </div>
+      Para conseguir uma conta grátis você pode usar os comandos /sorte e /convite ou entrar no canal para participar de sorteios e desafios valendo Crunchyroll.
+      <div class="button-container">
+        <button class="button">Botão Esquerdo</button>
+      </div>
+    </div>
+    <div class="divider"></div> <!-- Divisória central -->
+    <div class="right-side">
+      <!-- Conteúdo para a conta compartilhada -->
+      <div>
+        <p><strong>Conta Compartilhada:</strong></p>
+        <p>📺 Crunchyroll compartilhada 👥</p>
+        <p>💰 Valor: R$4,99.</p>
+        <p>✅ Assinatura oficial Premium.</p>
+        <p>👑 Plano Mega Fã</p>
+        <p>♾ Telas ILIMITADAS.</p>
+        <p>📆 Validade: 15/12/23</p>
+        <p>💠 Pagamento: PIX</p>
+        <p>❗ Não é permitido alterar e-mail e senha.</p>
+        <p>❗ Não compartilhe a conta. Se você compartilhar e mudarem a senha, quem vai ficar sem conta é você mesmo.</p>
+        <p><strong>DICAS:</strong></p>
+        <p>🍀 Você pode diminuir o valor da assinatura ou conseguir um login grátis digitando /sorte.</p>
+        <p>🎁 Todo mês tem um sorteio apenas entre os assinantes.</p>
+        <p>✈️ Se tiver alguma dúvida, vá até o grupo <a href="https://t.me/Crunchyroll_Gratis">@Crunchyroll_Gratis</a> e digite @admin e a sua dúvida.</p>
+      </div>
+      <div class="button-container">
+        <button class="button">Botão Direito</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
