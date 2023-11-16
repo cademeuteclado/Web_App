@@ -4,12 +4,6 @@
     border:none;
   }
   
-  body {
-    background-color: rgb(255, 255, 255);
-    font-size: 2rem;
-    font-family: arial;
-  }
-  
   .content {
     display: flex;
     flex-direction: column;
@@ -21,7 +15,7 @@
   
   /* WOOOW */
   button {
-    width: 100px;
+    width: 75px;
     height: 30px;
     background: #2076e6;
     cursor:pointer;
@@ -32,6 +26,7 @@
     color: #ffffff;
     text-transform:uppercase;
     letter-spacing:1px;
+    font-size: 10px;
   }
   
   button span span {

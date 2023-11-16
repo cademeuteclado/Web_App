@@ -2,69 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Frontpage de Produtos</title>
-  <link rel="stylesheet" href="estilos_botoes.css">
+  <title>CYBER STORE</title>
   <style>
-    /* Estilos específicos para a página de produtos */
+    body {
+      background-color: #7b7bd8;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 400px; /* Ajuste conforme necessário */
+      margin: 0 auto;
+    }
+
     .product {
-      width: 125px;
-      height: 200px;
-      float: left;
-      margin: 10px;
+      width: calc(33.33% - 20px); /* 3 produtos por linha */
+      margin-bottom: -20px;
       text-align: center;
     }
 
     .product img {
-      width: 125px;
-      height: 125px;
-    }
-
-    .product button {
-      margin-top: 10px;
-    }
-
-    /* Estilos adicionais para melhorar a visualização na demo */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-content: space-between;
-      width: 400px;
-      margin: 20px auto;
-      padding: 10px;
-      border: 1px solid #ccc;
+      width: 75px;
+      height: 75px;
     }
   </style>
+  <link rel="stylesheet" href="estilos_botoes.css">
 </head>
 <body>
-  <!-- Produtos -->
-  <div class="container">
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 1">
-      <button class="cta">Resgatar</button>
+  <section class="content">
+    <div class="box">
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <!-- Adicione os outros produtos seguindo o mesmo padrão -->
+      <!-- Produto 2 -->
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <!-- Produto 3 -->
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <!-- Repita este padrão para mais produtos -->
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+      <div class="product">
+        <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
+        <button class="cta" onclick="activateAnimation()">
+          <a href="#">Resgatar</a>
+          <span class="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
     </div>
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 2">
-      <button class="cta">Resgatar</button>
-    </div>
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 3">
-      <button class="cta">Resgatar</button>
-    </div>
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 4">
-      <button class="cta">Resgatar</button>
-    </div>
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 5">
-      <button class="cta">Resgatar</button>
-    </div>
-    <div class="product">
-      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 6">
-      <button class="cta">Resgatar</button>
-    </div>
-  </div>
+  </section>
+
+  <script>
+    function activateAnimation() {
+      var button = document.querySelector('.cta');
+      button.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
