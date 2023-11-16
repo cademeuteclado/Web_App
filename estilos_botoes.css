@@ -17,13 +17,23 @@
   button {
     width: 75px;
     height: 30px;
-    background: #2076e6;
-    cursor:pointer;
-    border-radius: 25px;
+    background-image: linear-gradient(
+      300deg,
+      hsl(240deg 95% 24%) 0%,
+      hsl(239deg 82% 29%) 10%,
+      hsl(238deg 70% 33%) 20%,
+      hsl(236deg 60% 39%) 31%,
+      hsl(235deg 50% 44%) 42%,
+      hsl(234deg 42% 50%) 54%,
+      hsl(233deg 45% 56%) 65%,
+      hsl(232deg 47% 63%) 77%,
+      hsl(230deg 51% 70%) 89%,
+      hsl(229deg 56% 77%) 100%
+    );  border-radius: 25px;
   }
   
   button a {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     text-transform:uppercase;
     letter-spacing:1px;
     font-size: 10px;
@@ -35,7 +45,7 @@
     margin: auto;
     height: 8px;
     width: 2px;
-    background: #2076e6;
+    background: #3c9ad1;
     opacity: 0;
   }
   

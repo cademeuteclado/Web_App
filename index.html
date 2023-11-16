@@ -5,14 +5,25 @@
   <title>CYBER STORE</title>
   <style>
     body {
-      background-color: #7b7bd8;
+      background: linear-gradient(135deg,  rgb(238,238,238) 0%,rgb(204,204,204) 100%);
+      margin: 0;
+      padding: 0;
     }
 
     .content {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       height: 100vh;
+      padding-top: -20px; /* Espaçamento para o título */
+      box-sizing: border-box;
+    }
+
+    .title {
+      font-size: 24px;
+      color: rgb(103, 14, 175);
+      margin-bottom: -200px; /* Espaçamento entre o título e os produtos */
     }
 
     .box {
@@ -21,6 +32,7 @@
       justify-content: space-around;
       max-width: 400px; /* Ajuste conforme necessário */
       margin: 0 auto;
+      margin-top: 200px; /* Move a caixa dos produtos para cima */
     }
 
     .product {
@@ -33,15 +45,18 @@
       width: 75px;
       height: 75px;
     }
+    
   </style>
   <link rel="stylesheet" href="estilos_botoes.css">
 </head>
 <body>
+  <div class="content">
+    <div class="title">CYBER STORE</div>
   <section class="content">
     <div class="box">
       <div class="product">
         <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Product Image">
-        <button class="cta" onclick="activateAnimation()">
+        <button class="cta" id="button1" onclick="activateAnimation()">
           <a href="#">Resgatar</a>
           <span class="shape">
             <span></span>
@@ -141,12 +156,25 @@
       </div>
     </div>
   </section>
-
   <script>
-    function activateAnimation() {
-      var button = document.querySelector('.cta');
+    function activateAnimation(button) {
       button.classList.toggle('active');
+      if (button.id === 'button1') {
+        // Se o botão pressionado for o button1, abre uma janela flutuante com uma mensagem
+        var popup = window.open('', '_blank', 'width=300,height=200');
+        popup.document.write('<h2>Botão 1 pressionado!</h2>');
+      }
     }
+  
+    // Seleciona todos os botões com a classe .cta
+    var buttons = document.querySelectorAll('.cta');
+  
+    // Itera sobre cada botão e adiciona o evento de clique
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        activateAnimation(button);
+      });
+    });
   </script>
 </body>
 </html>
