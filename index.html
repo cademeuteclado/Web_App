@@ -1,122 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Reset de margens e padding para o corpo da página */
-        body {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <title>Frontpage de Produtos</title>
+  <link rel="stylesheet" href="estilos_botoes.css">
+  <style>
+    /* Estilos específicos para a página de produtos */
+    .product {
+      width: 125px;
+      height: 200px;
+      float: left;
+      margin: 10px;
+      text-align: center;
+    }
 
-        /* Estilo para alinhar os produtos */
-        .linha {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+    .product img {
+      width: 125px;
+      height: 125px;
+    }
 
-        .produto {
-            margin: 10px;
-            text-align: center;
-        }
+    .product button {
+      margin-top: 10px;
+    }
 
-        /* Estilo para o botão "Assinar" */
-        .botao-assinar {
-            background: linear-gradient(to bottom, #007bff, #0056b3);
-            border: none;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            width: 110px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Estilo para as imagens dos produtos */
-        .produto img {
-            width: 150px;
-            height: 150px;
-        }
-    </style>
+    /* Estilos adicionais para melhorar a visualização na demo */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-between;
+      width: 400px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-
-<!-- Linha de produtos -->
-<div class="linha">
-  <div class="produto">
-      <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto" >
-      <br>
-      <a href="#" class="botao-assinar">Assinar</a>
-      <br>
-      <a href="#" class="botao-informacoes">Informações</a>
-  </div>
-  <div class="produto">
-      <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-      <br>
-      <a href="#" class="botao-assinar">Assinar</a>
-      <br>
-      <a href="#" class="botao-informacoes">Informações</a>
-  </div>
-  <div class="produto">
-      <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-      <br>
-      <a href="#" class="botao-assinar">Assinar</a>
-      <br>
-      <a href="#" class="botao-informacoes">Informações</a>
-  </div>
-</div>
-<!-- Linha de produtos -->
-<div class="linha">
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto" >
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+  <!-- Produtos -->
+  <div class="container">
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 1">
+      <button class="cta">Resgatar</button>
     </div>
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 2">
+      <button class="cta">Resgatar</button>
     </div>
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 3">
+      <button class="cta">Resgatar</button>
     </div>
-  </div>
-  <!-- Lienha de produtos -->
-<div class="linha">
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto" >
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 4">
+      <button class="cta">Resgatar</button>
     </div>
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 5">
+      <button class="cta">Resgatar</button>
     </div>
-    <div class="produto">
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto-585x380.png" alt="Produto">
-        <br>
-        <a href="#" class="botao-assinar">Assinar</a>
-        <br>
-        <a href="#" class="botao-informacoes">Informações</a>
+    <div class="product">
+      <img src="https://seeklogo.com/images/C/crunchyroll-logo-ED92B45335-seeklogo.com.png" alt="Produto 6">
+      <button class="cta">Resgatar</button>
     </div>
   </div>
 </body>
